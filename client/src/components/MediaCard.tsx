@@ -24,7 +24,7 @@ export default function MediaCard({ title, description, imagePath }: AppProps) {
         <Typography gutterBottom variant="h5" component="div">{title}</Typography>
         <Typography variant="body2" color="text.secondary">{description}</Typography>
       </CardContent>
-      <CardActions>
+      <CardActions className="button-container">
         <Button variant="contained" size="small">View Overview</Button>
         <Button variant="contained" size="small">View Project</Button>
       </CardActions>

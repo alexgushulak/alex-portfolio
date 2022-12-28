@@ -13,6 +13,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import resumeURL from '../assets/Alex_Gushulak_Software_Resume.pdf';
 
 interface Props {
   /**
@@ -71,13 +72,13 @@ export default function MainNavBar(props: Props) {
           <Typography
             variant="h6"
             component="div"
-            sx={{ flexGrow: 1, 'text-align': 'left', display: { xs: 'none', sm: 'block' } }}
+            sx={{ flexGrow: 1, 'text-align': {xs: 'left', sm: 'left'}, display: { sm: 'block' } }}
           >
             {websiteName}
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
-              <Button href="/src/assets/Alex_Gushulak_Software_Resume.pdf" key={item} sx={{ color: '#fff' }}>
+              <Button href={resumeURL} key={item} sx={{ color: '#fff' }}>
                 {item}
               </Button>
             ))}

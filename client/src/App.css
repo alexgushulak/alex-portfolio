@@ -7,6 +7,11 @@ body {
   text-align: center;
 }
 
+.button-container {
+  justify-content: center;
+  margin: 20px;
+}
+
 .media-card {
   display: inline-block;
   margin: 10px;
@@ -19,12 +24,13 @@ body {
 
 .main-page-container {
   justify-content: left;
+  /* margin: 100px 0px; */
 }
 
 .main-page-hello {
   font-family: 'Roboto Mono', monospace!important;
   text-align: left;
-  font-size: 22px!important;
+  font-size: 16px!important;
 }
 
 .main-page-title {
@@ -40,11 +46,17 @@ body {
 
 .main-page-description {
   text-align: left;
-  font-size: 20px!important;
-  width: 420px;
+  font-size: 16px!important;
+  max-width: 500px;
+  margin-bottom: 36.75px!important;
 }
 
 .main-page-button {
-  padding: 20px 40px!important;
-  font-size: 15px!important;
+  font-family: 'Roboto Mono', monospace!important;
+  padding: 10px 30px!important;
+  font-size: 12px!important;
+}
+
+.profile-avatar {
+  margin: 20px 20px;
 }
