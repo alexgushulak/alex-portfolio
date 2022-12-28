@@ -23,7 +23,7 @@ interface Props {
 }
 
 const drawerWidth = 240;
-const websiteName = "Alex Gushulak Software Portfolio"
+const websiteName = "Alex Gushulak Portfolio"
 const navItems = ['Home', 'About Me', 'Resume', 'Portfolio'];
 
 export default function MainNavBar(props: Props) {
@@ -77,7 +77,7 @@ export default function MainNavBar(props: Props) {
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff' }}>
+              <Button href="/src/assets/Alex_Gushulak_Software_Resume.pdf" key={item} sx={{ color: '#fff' }}>
                 {item}
               </Button>
             ))}

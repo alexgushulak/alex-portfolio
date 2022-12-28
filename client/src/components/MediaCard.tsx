@@ -26,7 +26,7 @@ export default function MediaCard({ title, description, imagePath }: AppProps) {
       </CardContent>
       <CardActions>
         <Button variant="contained" size="small">View Overview</Button>
-        <Button variant="contained" size="small">View Website</Button>
+        <Button variant="contained" size="small">View Project</Button>
       </CardActions>
     </Card>
   );
