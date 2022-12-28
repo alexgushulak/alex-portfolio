@@ -41,7 +41,7 @@ body {
 .main-page-description {
   text-align: left;
   font-size: 20px!important;
-  width: 420px;
+  max-width: 420px;
 }
 
 .main-page-button {
