@@ -25,7 +25,7 @@ interface Props {
 
 const drawerWidth = 240;
 const websiteName = "Alex Gushulak Portfolio"
-const navItems = ['Home', 'About Me', 'Resume', 'Portfolio'];
+const navItems = ['Home', 'About Me', 'Portfolio'];
 
 export default function MainNavBar(props: Props) {
   const { window } = props;
@@ -49,6 +49,11 @@ export default function MainNavBar(props: Props) {
             </ListItemButton>
           </ListItem>
         ))}
+        <ListItem key="Resume" disablePadding>
+          <ListItemButton sx={{ textAlign: 'center' }}>
+            <ListItemText primary="Resume" />
+          </ListItemButton>
+        </ListItem>
       </List>
     </Box>
   );
@@ -82,6 +87,9 @@ export default function MainNavBar(props: Props) {
                 {item}
               </Button>
             ))}
+            <Button variant="outlined" href={resumeURL} key="Resume" sx={{ color: "#64ffd8" }}>
+              Resume
+            </Button>
           </Box>
         </Toolbar>
       </AppBar>
