@@ -13,10 +13,11 @@ const darkTheme = createTheme({
   palette: {
     mode: 'dark',
     primary: {
-      light: '#757ce8',
+      light: '#75e8a5',
       main: '#64ffd8',
       dark: '#64ffd8',
       contrastText: '#000'
+      
     }
   },
 });

@@ -60,3 +60,7 @@ body {
 .profile-avatar {
   margin: 20px 20px;
 }
+
+a:hover {
+  color: rgb(100, 255, 216)!important;
+}
