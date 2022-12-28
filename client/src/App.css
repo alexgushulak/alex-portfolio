@@ -36,8 +36,6 @@ body {
 .main-page-title {
   text-align: left;
   font-weight: 700!important;
-  font-size: 75px!important;
-
 }
 
 .main-page-sub-title {
@@ -63,4 +61,21 @@ body {
 
 a:hover {
   color: rgb(100, 255, 216)!important;
+}
+
+.company-name-highlighted {
+  color: rgb(100, 255, 216)!important;
+  font-weight: lighter;
+}
+
+.job-header {
+  font-size: 18px!important;
+  margin: 0px!important;
+  display: flex;
+  justify-content: flex-start
+}
+
+.job-list-box {
+  width: 900px!important;
+  margin: 0 auto!important;
 }

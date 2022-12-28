@@ -3,6 +3,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+import JobInfo from './JobInfo';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -46,7 +47,7 @@ export default function VerticalTabs() {
 
   return (
     <Box
-      sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex', height: 304, 'justify-content': 'left', width: 1000 }}
+      className="job-list-box" sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex', height: 304, 'justify-content': 'left', width: 1000 }}
     >
       <Tabs
         orientation="vertical"
@@ -54,24 +55,35 @@ export default function VerticalTabs() {
         value={value}
         onChange={handleChange}
         aria-label="Vertical tabs example"
-        sx={{ borderRight: 1, borderColor: 'divider' }}
+        sx={{ borderRight: 1, borderColor: 'divider', minWidth: '150px' }}
       >
         <Tab label="Volta Labs" {...a11yProps(0)} />
         <Tab label="Shark Ninja" {...a11yProps(1)} />
         <Tab label="Bosch TM4EV" {...a11yProps(2)} />
-        <Tab label="Parker Hannifin" {...a11yProps(3)} />
       </Tabs>
       <TabPanel value={value} index={0}>
-        Thermal Engineer @ Volta Labs
+        <JobInfo 
+          companyName="Volta Labs"
+          jobTitle="Thermal Engineer"
+          jobDuty2="Developed node web app that allows a user to add, view, and search employees in a MySQL database"
+          jobDuty3="Used React to create a filtered search box to elegantly display specific employee data."
+          jobDuty1="Implemented a registration and login system that restricted permissions on certain pages in the application."/>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        R&D Mechanical Engineer @ SharkNinja
+        <JobInfo 
+          companyName="SharkNinja"
+          jobTitle="Mechanical Engineer"
+          jobDuty2="Filler Data Is Here Right Now"
+          jobDuty3="Filler Data Is Here Right Now"
+          jobDuty1="Filler Data Is Here Right Now"/>
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Mechanical Engineering Co-op @ Bosch
-      </TabPanel>
-      <TabPanel value={value} index={3}>
-        Mechanical Engineering Co-op @ Parker Hannifin
+        <JobInfo 
+          companyName="Bosch"
+          jobTitle="Mechanical Engineering Co-op"
+          jobDuty2="Filler Data Is Here Right Now"
+          jobDuty3="Filler Data Is Here Right Now"
+          jobDuty1="Filler Data Is Here Right Now"/>
       </TabPanel>
     </Box>
   );

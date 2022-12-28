@@ -17,15 +17,15 @@ export default function IntroductionCard() {
           My name is
         </Typography>
           <Box display="flex">
-            <Typography className="main-page-title" variant="h1" component="div">Alex Gushulak. 🚀</Typography>
+            <Typography className="main-page-title" variant="h1" component="div" sx={{'font-size': {xs:'50px!important',sm:'75px!important'}}}>Alex Gushulak. 🚀</Typography>
           </Box>
-        <Typography className="main-page-title" color="#b7e7da" variant="h1" component="div" gutterBottom>I Like To Write Code.</Typography>
+        <Typography className="main-page-title" color="#b7e7da" variant="h1" component="div" gutterBottom sx={{'font-size': {xs:'50px!important',sm:'75px!important'}}}>I Like To Write Code.</Typography>
         <Typography className="main-page-description" color="#dadada" variant="h6" component="div" gutterBottom>
         As a mechanical engineer turned software engineer, I have a unique blend of technical skills and problem-solving abilities. 
         I'm passionate about building clean and performant full-stack web applications. 
         </Typography>
         <Box mt={3} display="flex" justifyContent="flex-start" alignItems="flex-start">
-          <Button className="main-page-button" variant="outlined">Check Out My Latest Project</Button>
+          <Button className="main-page-button" variant="outlined">Check Out My Latest Work</Button>
         </Box>
     </Container>
     </div>
