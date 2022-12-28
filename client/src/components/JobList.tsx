@@ -47,7 +47,7 @@ export default function VerticalTabs() {
 
   return (
     <Box
-      className="job-list-box" sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex', height: 304, 'justify-content': 'left', width: 1000 }}
+      className="job-list-box" sx={{ display: { sm: 'flex', xs: 'flex' }, flexGrow: 1, bgcolor: 'background.paper', height: 400, 'justify-content': 'left', width: {sm: 500, md: 1000} }}
     >
       <Tabs
         orientation="vertical"
@@ -80,7 +80,7 @@ export default function VerticalTabs() {
       <TabPanel value={value} index={2}>
         <JobInfo 
           companyName="Bosch"
-          jobTitle="Mechanical Engineering Co-op"
+          jobTitle="Mech-E Co-op"
           jobDuty2="Filler Data Is Here Right Now"
           jobDuty3="Filler Data Is Here Right Now"
           jobDuty1="Filler Data Is Here Right Now"/>

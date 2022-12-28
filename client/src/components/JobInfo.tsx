@@ -3,7 +3,7 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import ListItemIcon from '@mui/material/ListItemIcon';
-import MUIIcon from '@mui/material/Icon';
+import { Typography } from '@mui/material';
 import ArrowCircleRightOutlinedIcon from '@mui/icons-material/ArrowCircleRightOutlined';
 
 type AppProps = {
@@ -17,7 +17,7 @@ type AppProps = {
 export default function JobInfo({companyName, jobTitle, jobDuty1, jobDuty2, jobDuty3}: AppProps) {
     return (
         <div>
-            <h4 className="job-header">{jobTitle} <span className="company-name-highlighted">&nbsp;@ {companyName}</span></h4>
+            <Typography sx={{'font-size': {xs: '13px!important', sm: '20px!important' }}} className="job-header">{jobTitle} <span className="company-name-highlighted">&nbsp;@ {companyName}</span></Typography>
             <List>
                 <ListItem sx={{pl: '0px'}}>
                     <ListItemIcon sx={{minWidth: '30px', mb: '3px'}}>

@@ -76,6 +76,10 @@ a:hover {
 }
 
 .job-list-box {
-  width: 900px!important;
+  max-width: 900px!important;
   margin: 0 auto!important;
+}
+
+.MuiListItemText-primary {
+  font-size: 15px!important;
 }
