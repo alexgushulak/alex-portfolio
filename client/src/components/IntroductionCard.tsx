@@ -17,7 +17,7 @@ export default function IntroductionCard() {
           My name is
         </Typography>
           <Box display="flex">
-            <Typography className="main-page-title" variant="h1" component="div">Alex Gushulak.</Typography>
+            <Typography className="main-page-title" variant="h1" component="div">Alex Gushulak. 🚀</Typography>
           </Box>
         <Typography className="main-page-title" color="#b7e7da" variant="h1" component="div" gutterBottom>I Like To Write Code.</Typography>
         <Typography className="main-page-description" color="#dadada" variant="h6" component="div" gutterBottom>
