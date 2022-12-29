@@ -1,6 +1,7 @@
 {
   "name": "server",
   "version": "1.0.0",
+  "engine": "16.14.0",
   "description": "server for portfolio",
   "main": "server.js",
   "scripts": {
