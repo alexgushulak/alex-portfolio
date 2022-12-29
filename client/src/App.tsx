@@ -9,7 +9,8 @@ import imgUrlComputer from './assets/computer.jpg';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import Fade from '@mui/material/Fade';
-import Slide from '@mui/material/Slide';
+import axios from 'axios';
+import React, { useState } from 'react';
 
 const darkTheme = createTheme({
   palette: {
@@ -24,12 +25,27 @@ const darkTheme = createTheme({
   },
 });
 
+
+
+
 export default function App() {
+
+  const [info, setInfo] = useState([]);
+
+  const gatherInfo = () => {
+    axios.get('https://alex-portfolio-production.up.railway.app/info').then((res) => {
+      setInfo(res.data.name);
+    });
+  }
+
+  React.useEffect(() => {gatherInfo();}, []);
+
   return (
     <div>
         <ThemeProvider theme={darkTheme}>
           <CssBaseline />
           <MainNavBar />
+          {info}
           <Fade in={true} timeout={500}>
             <div>
               <IntroductionCard />

@@ -83,11 +83,11 @@ export default function MainNavBar(props: Props) {
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
-              <Button href={resumeURL} key={item} sx={{ color: '#fff' }}>
+              <Button href={resumeURL} key={item} sx={{ color: "#FFF", 'font-size': '12px!important', mx: {sm: 0, md: 1}   }}>
                 {item}
               </Button>
             ))}
-            <Button variant="outlined" href={resumeURL} key="Resume" sx={{ color: "#64ffd8" }}>
+            <Button variant="outlined" href={resumeURL} key="Resume" sx={{ color: "#64ffd8", 'font-size': '12px!important', mx: {sm: 0, md: 1}  }}>
               Resume
             </Button>
           </Box>
