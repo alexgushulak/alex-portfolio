@@ -11,9 +11,10 @@ app.get('/', (req, res) => {
 })
 
 app.get('/info', (req, res) => {
-    console.log("Some is entering the info route")
+    console.log(req.socket.remoteAddress);
+    console.log(req.ip);
     res.status(200).send({
-        name: "John Doe",
+        name: "",
         age: 30,
         address: "1234 Main St"
     })
