@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
 
 app.get('/info', (req, res) => {
     console.log(req.socket.remoteAddress);
-    console.log(req.ip);
+    console.log(req.header('x-forwarded-for'));
     res.status(200).send({
         name: "",
         age: 30,
