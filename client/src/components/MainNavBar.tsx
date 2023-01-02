@@ -28,7 +28,7 @@ interface Props {
 
 const drawerWidth = 240;
 const websiteName = "Alex Gushulak Portfolio"
-const navItems = ['Home', 'About Me', 'Portfolio'];
+const navItems = ['About Me', 'Work Experience', 'Projects'];
 
 export default function MainNavBar(props: Props) {
   const { window } = props;
@@ -53,7 +53,7 @@ export default function MainNavBar(props: Props) {
           </ListItem>
         ))}
         <ListItem key="Resume" disablePadding>
-          <ListItemButton sx={{ textAlign: 'center' }}>
+          <ListItemButton href={resumeURL}  sx={{ textAlign: 'center' }}>
             <ListItemText primary="Resume" />
           </ListItemButton>
         </ListItem>
@@ -62,12 +62,13 @@ export default function MainNavBar(props: Props) {
   );
 
   const websiteLogo = (
-    <Box component="div" mx={2}
-            sx={{ height: '42px',flexGrow: 1, 'text-align': {xs: 'right', sm: 'left'}, display: { sm: 'block' } }}>
-          <a href="/">
-          <img src={logo} alt="logo" height="40px" />
-          </a>
-          </Box>
+    <Box 
+      component="div" mx={2}
+      sx={{ height: '42px',flexGrow: 1, 'text-align': {xs: 'right', sm: 'left'}, display: { sm: 'block' } }}>
+      <a href="/">
+        <img src={logo} alt="logo" height="40px" />
+      </a>
+    </Box>
   );
 
   const container = window !== undefined ? () => window().document.body : undefined;

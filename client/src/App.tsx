@@ -2,6 +2,7 @@ import Container from '@mui/material/Container';
 import MediaCard from './components/MediaCard';
 import MainNavBar from './components/MainNavBar';
 import JobList from './components/JobList';
+import Divider from '@mui/material/Divider';
 import IntroductionCard from './components/IntroductionCard';
 import imgUrlBusiness from './assets/business.jpeg';
 import imgUrlCliff from './assets/cliff.jpg';
@@ -59,8 +60,9 @@ export default function App() {
             <JobList />
           </Container>
           <Container sx={{mb:10}}>
-            <Typography variant="h5" component="div" align="left" sx={{'font-family': 'Roboto Mono', ml:'4%'}} gutterBottom>03. My Work </Typography>
-            <MediaCard title={"Finanical Tracking Web App"} description={"Desc 1"} imagePath= {(imgUrlComputer)} />
+            <Typography variant="h5" component="div" align="left" sx={{'font-family': 'Roboto Mono', ml:'0%'}} gutterBottom>Projects </Typography>
+            <Divider variant="fullWidth"/>
+            <MediaCard title={"Finanical Tracking Web App"} description={"Desc 1"} imagePath={(imgUrlComputer)} />
             <MediaCard title={"Temperature Plot Generator GUI"} description={"Desc 2"} imagePath={imgUrlBusiness} />
             <MediaCard title={"Machine Learning"} description={"Desc 3"} imagePath={imgUrlCliff}/>
           </Container>

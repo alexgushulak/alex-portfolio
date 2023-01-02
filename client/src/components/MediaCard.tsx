@@ -25,8 +25,8 @@ export default function MediaCard({ title, description, imagePath }: AppProps) {
         <Typography variant="body2" color="text.secondary">{description}</Typography>
       </CardContent>
       <CardActions className="button-container">
-        <Button variant="contained" size="small">Source Code</Button>
-        <Button variant="contained" size="small">Deployed App</Button>
+        <Button variant="contained" size="small">Github</Button>
+        <Button variant="contained" size="small">Demo</Button>
       </CardActions>
     </Card>
   );

@@ -2,6 +2,7 @@ import * as React from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
+import Divider from '@mui/material/Divider';
 import Box from '@mui/material/Box';
 import JobInfo from './JobInfo';
 
@@ -47,8 +48,10 @@ export default function VerticalTabs() {
 
   return (
     <div>
+    <Typography variant="h5" component="div" align="left" sx={{'font-family': 'Roboto Mono', pl:'0%'}} gutterBottom>Work Experience </Typography>
+    <Divider variant="fullWidth" />
     <Box
-      className="job-list-box" sx={{ display: { sm: 'flex', xs: 'none' }, flexGrow: 1, bgcolor: '', height: 400, 'justify-content': 'left', width: {sm: 500, md: 1000} }}
+      className="job-list-box" sx={{ display: { sm: 'flex', xs: 'none' }, flexGrow: 1, bgcolor: '', 'min-height': '300px', height: 'auto', 'justify-content': 'left', width: {sm: 500, md: 1000} }}
     >
       <Tabs
         orientation="vertical"
