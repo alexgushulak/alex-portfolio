@@ -46,8 +46,9 @@ export default function VerticalTabs() {
   };
 
   return (
+    <div>
     <Box
-      className="job-list-box" sx={{ display: { sm: 'flex', xs: 'flex' }, flexGrow: 1, bgcolor: 'background.paper', height: 400, 'justify-content': 'left', width: {sm: 500, md: 1000} }}
+      className="job-list-box" sx={{ display: { sm: 'flex', xs: 'none' }, flexGrow: 1, bgcolor: '', height: 400, 'justify-content': 'left', width: {sm: 500, md: 1000} }}
     >
       <Tabs
         orientation="vertical"
@@ -86,5 +87,40 @@ export default function VerticalTabs() {
           jobDuty1="Filler Data Is Here Right Now"/>
       </TabPanel>
     </Box>
+    <Box sx={{ display: { sm: 'none', xs: 'flex' }, flexGrow: 1, bgcolor: '', height: 1, 'justify-content': 'left', width: {sm: 500, md: 1000} }}>
+
+    </Box>
+      <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+    <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+      <Tab label="Volta Labs" {...a11yProps(0)} />
+      <Tab label="Shark Ninja" {...a11yProps(1)} />
+      <Tab label="Bosch TM4EV" {...a11yProps(2)} />
+    </Tabs>
+  </Box>
+  <TabPanel value={value} index={0}>
+        <JobInfo 
+          companyName="Volta Labs"
+          jobTitle="Thermal Engineer"
+          jobDuty2="Developed node web app that allows a user to add, view, and search employees in a MySQL database"
+          jobDuty3="Used React to create a filtered search box to elegantly display specific employee data."
+          jobDuty1="Implemented a registration and login system that restricted permissions on certain pages in the application."/>
+      </TabPanel>
+      <TabPanel value={value} index={1}>
+        <JobInfo 
+          companyName="SharkNinja"
+          jobTitle="Mechanical Engineer"
+          jobDuty2="Filler Data Is Here Right Now"
+          jobDuty3="Filler Data Is Here Right Now"
+          jobDuty1="Filler Data Is Here Right Now"/>
+      </TabPanel>
+      <TabPanel value={value} index={2}>
+        <JobInfo 
+          companyName="Bosch"
+          jobTitle="Mech-E Co-op"
+          jobDuty2="Filler Data Is Here Right Now"
+          jobDuty3="Filler Data Is Here Right Now"
+          jobDuty1="Filler Data Is Here Right Now"/>
+      </TabPanel>
+    </div>
   );
 }

@@ -14,9 +14,9 @@ type AppProps = {
 
 export default function MediaCard({ title, description, imagePath }: AppProps) {
   return (
-    <Card className="media-card" sx={{ maxWidth: 500, minWidth: 300 }}>
+    <Card className="media-card" sx={{ width: { xs: 0.90, md: 0.45  } }}>
       <CardMedia
-        sx={{ height: 140 }}
+        sx={{ height: 250 }}
         image={imagePath}
         title="na"
       />
@@ -25,8 +25,8 @@ export default function MediaCard({ title, description, imagePath }: AppProps) {
         <Typography variant="body2" color="text.secondary">{description}</Typography>
       </CardContent>
       <CardActions className="button-container">
-        <Button variant="contained" size="small">View Overview</Button>
-        <Button variant="contained" size="small">View Project</Button>
+        <Button variant="contained" size="small">Source Code</Button>
+        <Button variant="contained" size="small">Deployed App</Button>
       </CardActions>
     </Card>
   );

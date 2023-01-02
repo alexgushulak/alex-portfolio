@@ -14,6 +14,9 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import resumeURL from '../assets/Alex_Gushulak_Software_Resume.pdf';
+import SvgIcon from '@mui/material/SvgIcon';
+import logo from '../assets/logo.svg';
+import Avatar from '@mui/material/Avatar';
 
 interface Props {
   /**
@@ -58,6 +61,15 @@ export default function MainNavBar(props: Props) {
     </Box>
   );
 
+  const websiteLogo = (
+    <Box component="div" mx={2}
+            sx={{ height: '42px',flexGrow: 1, 'text-align': {xs: 'right', sm: 'left'}, display: { sm: 'block' } }}>
+          <a href="/">
+          <img src={logo} alt="logo" height="40px" />
+          </a>
+          </Box>
+  );
+
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
@@ -74,16 +86,16 @@ export default function MainNavBar(props: Props) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography
+          {websiteLogo}
+          {/* <Typography
             variant="h6"
             component="div"
             sx={{ flexGrow: 1, 'text-align': {xs: 'left', sm: 'left'}, display: { sm: 'block' } }}
           >
-            {websiteName}
-          </Typography>
+          </Typography> */}
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
-              <Button href={resumeURL} key={item} sx={{ color: "#FFF", 'font-size': '12px!important', mx: {sm: 0, md: 1}   }}>
+              <Button href={resumeURL} key={item} sx={{ color: "#FFF", 'font-size': {sm: '11px!important', md: '12px!important'}, mx: {sm: 0.5, md: 1} }}>
                 {item}
               </Button>
             ))}
