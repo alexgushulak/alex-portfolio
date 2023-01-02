@@ -87,10 +87,8 @@ export default function VerticalTabs() {
           jobDuty1="Filler Data Is Here Right Now"/>
       </TabPanel>
     </Box>
-    <Box sx={{ display: { sm: 'none', xs: 'flex' }, flexGrow: 1, bgcolor: '', height: 1, 'justify-content': 'left', width: {sm: 500, md: 1000} }}>
-
-    </Box>
-      <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+    <Box sx={{ display: { sm: 'none' }, flexGrow: 1, bgcolor: '', height: 1, 'justify-content': 'left', width: {sm: 500, md: 1000} }}>
+    <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
     <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
       <Tab label="Volta Labs" {...a11yProps(0)} />
       <Tab label="Shark Ninja" {...a11yProps(1)} />
@@ -121,6 +119,8 @@ export default function VerticalTabs() {
           jobDuty3="Filler Data Is Here Right Now"
           jobDuty1="Filler Data Is Here Right Now"/>
       </TabPanel>
+    </Box>
+
     </div>
   );
 }
