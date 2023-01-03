@@ -13,6 +13,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import axios from 'axios';
 import React, { useState } from 'react';
 import AboutMe from './components/AboutMe';
+import Footer from './components/Footer';
 import { orange } from '@mui/material/colors';
 
 const darkTheme = createTheme({
@@ -77,6 +78,7 @@ export default function App() {
               <MediaCard title={"Temperature Plot Generator GUI"} description={"Desc 2"} imagePath={imgUrlBusiness} />
               <MediaCard title={"Machine Learning"} description={"Desc 3"} imagePath={imgUrlCliff}/>
             </Container>
+            <Footer />
             </div>
         </ThemeProvider>
     </div>

@@ -72,25 +72,25 @@ export default function VerticalTabs() {
         <JobInfo 
           companyName="Volta Labs"
           jobTitle="Thermal Engineer"
-          jobDuty2="Developed node web app that allows a user to add, view, and search employees in a MySQL database"
-          jobDuty3="Used React to create a filtered search box to elegantly display specific employee data."
-          jobDuty1="Implemented a registration and login system that restricted permissions on certain pages in the application."/>
+          jobDuty1="Developed python GUI to input CSV data, modify plot settings, and display thermal calibration graphs."
+          jobDuty2="Improved functionality of heater control system by modifying C++ classes and control logic."
+          jobDuty3="Modified 3D Printer Controller firmware to control heaters with custom temperature sensors."/>
       </TabPanel>
       <TabPanel value={value} index={1}>
         <JobInfo 
-          companyName="SharkNinja"
+          companyName="Bosch"
           jobTitle="R&D Engineer"
-          jobDuty2="Filler Data Is Here Right Now"
-          jobDuty3="Filler Data Is Here Right Now"
-          jobDuty1="Filler Data Is Here Right Now"/>
+          jobDuty1="Wrote LabVIEW and MATLAB programs to monitor and analyze components (pumps, valves, HXs, heaters)"
+          jobDuty2="Implemented LIN communication protocol in LABVIEW to enable testing of propriety valve and firmware."
+          jobDuty3="Test"/>
       </TabPanel>
       <TabPanel value={value} index={2}>
         <JobInfo 
           companyName="Bosch"
           jobTitle="Mech-E Co-op"
-          jobDuty2="Filler Data Is Here Right Now"
-          jobDuty3="Filler Data Is Here Right Now"
-          jobDuty1="Filler Data Is Here Right Now"/>
+          jobDuty1="Wrote LabVIEW and MATLAB programs to monitor and analyze components (pumps, valves, HXs, heaters)"
+          jobDuty2="Implemented LIN communication protocol in LABVIEW to enable testing of propriety valve and firmware."
+          jobDuty3="Test"/>
       </TabPanel>
     </Box>
     <Box sx={{ display: { sm: 'none' }, flexGrow: 1, bgcolor: '', height: 1, 'justify-content': 'left', width: {sm: 500, md: 1000} }}>

@@ -20,19 +20,19 @@ export default function JobInfo({companyName, jobTitle, jobDuty1, jobDuty2, jobD
             <Typography sx={{'font-size': {sm: '20px!important', md: '20px!important' }, justifyContent: {xs: 'left', sm: 'left'}}} className="job-header">{jobTitle} <span className="company-name-highlighted">&nbsp;@ {companyName}</span></Typography>
             <List>
                 <ListItem sx={{pl: '0px'}}>
-                    <ListItemIcon sx={{minWidth: '30px', mb: '10px'}}>
+                    <ListItemIcon sx={{minWidth: '30px', mb: '0px'}}>
                         < ArrowCircleRightOutlinedIcon />
                     </ListItemIcon>
                     <ListItemText primary={jobDuty1} />
                 </ListItem>
                 <ListItem sx={{pl: '0px'}}>
-                    <ListItemIcon sx={{minWidth: '30px', mb: '3px'}}>
+                    <ListItemIcon sx={{minWidth: '30px', mb: '0px'}}>
                         < ArrowCircleRightOutlinedIcon />
                     </ListItemIcon>
                     <ListItemText primary={jobDuty2} />
                 </ListItem>
                 <ListItem sx={{pl: '0px'}}>
-                    <ListItemIcon sx={{minWidth: '30px', mb: '3px'}}>
+                    <ListItemIcon sx={{minWidth: '30px', mb: '0px'}}>
                         < ArrowCircleRightOutlinedIcon />
                     </ListItemIcon>
                     <ListItemText primary={jobDuty3} />
