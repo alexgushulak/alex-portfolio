@@ -11,17 +11,16 @@ import '../App.css';
 
 export default function IntroductionCard() {
   return (
-    <Container maxWidth="md" sx={{'min-height': '550px', 'height': {xs: '90vh', sm:'90vh'}, 'line-height': {xs: '25px', sm: '75px'},'margin-top': {xs: 0, sm: 0}, 'margin-bottom': {xs: 0, sm: 0}}} >
+    <Container maxWidth='md' sx={{'min-height': '550px', 'height': {xs: '90vh', sm:'90vh'}, 'line-height': {xs: '25px', sm: '75px'},'margin-top': {xs: 0, sm: 0}, 'margin-bottom': {xs: 0, sm: 0}}} >
     <Container
       className="main-page-container"
-      maxWidth="md"
       sx={{'vertical-align': 'middle', 'display': 'inline'}}
     >
         <Typography className="main-page-hello" variant="h6" component="div" gutterBottom>
           My name is
         </Typography>
           <Box display="flex">
-            <Typography className="main-page-title" variant="h1" component="div" sx={{'font-size': {xs:'50px!important',sm:'75px!important'}}}>Alex Gushulak. 🚀</Typography>
+            <Typography className="main-page-title" variant="h1" component="div" sx={{'font-size': {xs:'11vw  !important',sm:'7vw!important', md:'6.5vw!important'}}}>Alex Gushulak. 🚀</Typography>
           </Box>
         <Typography
           className="main-page-title"
@@ -29,7 +28,7 @@ export default function IntroductionCard() {
           variant="h1"
           component="div"
           gutterBottom
-          sx={{'font-size': {xs:'50px!important',sm:'75px!important'}}}>
+          sx={{'font-size': {xs:'11vw!important',sm:'7vw!important', md:'6vw!important'}}}>
             I Like To Write Code
         </Typography>
         <Typography className="main-page-description" color="#dadada" variant="h6" component="div" gutterBottom>
