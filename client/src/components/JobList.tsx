@@ -2,6 +2,7 @@ import * as React from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
 import Divider from '@mui/material/Divider';
 import Box from '@mui/material/Box';
 import JobInfo from './JobInfo';
@@ -47,11 +48,13 @@ export default function VerticalTabs() {
   };
 
   return (
-    <div>
-    <Typography variant="h5" component="div" align="left" sx={{'font-family': 'Roboto Mono', pl:'0%'}} gutterBottom>Work Experience </Typography>
-    <Divider variant="fullWidth" />
+    <Container
+            className="main-page-container"
+            maxWidth="md"
+            sx={{'margin-top': {xs: 25, sm: 25}, 'margin-bottom': {xs: 75, sm: 100}}}
+        >
     <Box
-      className="job-list-box" sx={{ display: { sm: 'flex', xs: 'none' }, flexGrow: 1, bgcolor: '', 'min-height': '300px', height: 'auto', 'justify-content': 'left', width: {sm: 500, md: 1000} }}
+      className="job-list-box" sx={{ display: { sm: 'flex', xs: 'none' }, flexGrow: 1, bgcolor: '', 'min-height': '300px', height: 'auto', 'justify-content': 'left', width: {sm: 'auto', md: 'auto'} }}
     >
       <Tabs
         orientation="vertical"
@@ -59,7 +62,7 @@ export default function VerticalTabs() {
         value={value}
         onChange={handleChange}
         aria-label="Vertical tabs example"
-        sx={{ borderRight: 1, borderColor: 'divider', minWidth: '150px' }}
+        sx={{ borderRight: 1, borderColor: 'divider', minWidth: '140px' }}
       >
         <Tab label="Volta Labs" {...a11yProps(0)} />
         <Tab label="Shark Ninja" {...a11yProps(1)} />
@@ -76,7 +79,7 @@ export default function VerticalTabs() {
       <TabPanel value={value} index={1}>
         <JobInfo 
           companyName="SharkNinja"
-          jobTitle="Mechanical Engineer"
+          jobTitle="R&D Engineer"
           jobDuty2="Filler Data Is Here Right Now"
           jobDuty3="Filler Data Is Here Right Now"
           jobDuty1="Filler Data Is Here Right Now"/>
@@ -124,6 +127,6 @@ export default function VerticalTabs() {
       </TabPanel>
     </Box>
 
-    </div>
+    </Container>
   );
 }

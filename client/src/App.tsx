@@ -12,6 +12,7 @@ import { Typography } from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
 import axios from 'axios';
 import React, { useState } from 'react';
+import AboutMe from './components/AboutMe';
 import { orange } from '@mui/material/colors';
 
 const darkTheme = createTheme({
@@ -54,19 +55,29 @@ export default function App() {
           <CssBaseline />
             <MainNavBar />
             {info}
-            <div>
+            <div className="website-container">
               <IntroductionCard />
-          <Container sx={{mb:10}}>
-            <JobList />
-          </Container>
-          <Container sx={{mb:10}}>
-            <Typography variant="h5" component="div" align="left" sx={{'font-family': 'Roboto Mono', ml:'0%'}} gutterBottom>Projects </Typography>
-            <Divider variant="fullWidth"/>
-            <MediaCard title={"Finanical Tracking Web App"} description={"Desc 1"} imagePath={(imgUrlComputer)} />
-            <MediaCard title={"Temperature Plot Generator GUI"} description={"Desc 2"} imagePath={imgUrlBusiness} />
-            <MediaCard title={"Machine Learning"} description={"Desc 3"} imagePath={imgUrlCliff}/>
-          </Container>
-          </div>
+              <Container sx={{mb:10}}>
+                <Typography id="about-me" className="section-title" variant="h5" component="div" align="left" sx={{'font-family': 'Roboto Mono', ml:'0%'}} gutterBottom>About Me </Typography>
+                <Divider variant="fullWidth" />
+                <AboutMe />
+              </Container>
+            <Container sx={{mb:10}}>
+              <Typography id="work-experience" className="section-title" variant="h5" component="div" align="left" sx={{'font-family': 'Roboto Mono', pl:'0%'}} gutterBottom>Work Experience </Typography>
+              <Divider variant="fullWidth" />
+              <JobList />
+            </Container>
+            <Container sx={{mb:10}}>
+              <Typography id="projects" className="section-title" variant="h5" component="div" align="left" sx={{'font-family': 'Roboto Mono', ml:'0%'}} gutterBottom>Projects </Typography>
+              <Divider variant="fullWidth"/>
+              <MediaCard
+                title={"Finanical Tracking Web App"}
+                description={"I created a financial tracking app featuring budgeting tools, bill reminders, personalized spending reports, and bank integration. Users can also set and track financial goals. Take control of your finances with this convenient app."}
+                imagePath={(imgUrlComputer)} />
+              <MediaCard title={"Temperature Plot Generator GUI"} description={"Desc 2"} imagePath={imgUrlBusiness} />
+              <MediaCard title={"Machine Learning"} description={"Desc 3"} imagePath={imgUrlCliff}/>
+            </Container>
+            </div>
         </ThemeProvider>
     </div>
   );

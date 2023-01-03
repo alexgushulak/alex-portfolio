@@ -20,7 +20,7 @@ export default function MediaCard({ title, description, imagePath }: AppProps) {
         image={imagePath}
         title="na"
       />
-      <CardContent>
+      <CardContent sx={{ 'min-height': 150 }}>
         <Typography gutterBottom variant="h5" component="div">{title}</Typography>
         <Typography variant="body2" color="text.secondary">{description}</Typography>
       </CardContent>

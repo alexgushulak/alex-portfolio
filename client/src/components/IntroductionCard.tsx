@@ -11,11 +11,11 @@ import '../App.css';
 
 export default function IntroductionCard() {
   return (
-    <div>
+    <Container maxWidth="md" sx={{'min-height': '550px', 'height': {xs: '90vh', sm:'90vh'}, 'line-height': {xs: '25px', sm: '75px'},'margin-top': {xs: 0, sm: 0}, 'margin-bottom': {xs: 0, sm: 0}}} >
     <Container
       className="main-page-container"
       maxWidth="md"
-      sx={{'margin-top': {xs: 25, sm: 100}, 'margin-bottom': {xs: 75, sm: 125}}}
+      sx={{'vertical-align': 'middle', 'display': 'inline'}}
     >
         <Typography className="main-page-hello" variant="h6" component="div" gutterBottom>
           My name is
@@ -37,9 +37,16 @@ export default function IntroductionCard() {
         I'm passionate about building clean and performant full-stack web applications. 
         </Typography>
         <Box mt={3} display="flex" justifyContent="flex-start" alignItems="flex-start">
-          <Button className="main-page-button" variant="outlined">Check Out My Latest Work</Button>
+          <Button href="#projects" className="main-page-button" variant="outlined">Check Out My Latest Work</Button>
         </Box>
+        <a href="#about-me">
+        <div className="chevron-container">
+          <div className="chevron"></div>
+          <div className="chevron"></div>
+          <div className="chevron"></div>
+        </div>
+        </a>
     </Container>
-    </div>
+    </Container>
   );
 }

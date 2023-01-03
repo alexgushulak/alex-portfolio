@@ -17,10 +17,10 @@ type AppProps = {
 export default function JobInfo({companyName, jobTitle, jobDuty1, jobDuty2, jobDuty3}: AppProps) {
     return (
         <div>
-            <Typography sx={{'font-size': {sm: '20px!important', md: '20px!important' }, 'justify-content': {xs: 'center', sm: 'left'}}} className="job-header">{jobTitle} <span className="company-name-highlighted">&nbsp;@ {companyName}</span></Typography>
+            <Typography sx={{'font-size': {sm: '20px!important', md: '20px!important' }, justifyContent: {xs: 'left', sm: 'left'}}} className="job-header">{jobTitle} <span className="company-name-highlighted">&nbsp;@ {companyName}</span></Typography>
             <List>
                 <ListItem sx={{pl: '0px'}}>
-                    <ListItemIcon sx={{minWidth: '30px', mb: '3px'}}>
+                    <ListItemIcon sx={{minWidth: '30px', mb: '10px'}}>
                         < ArrowCircleRightOutlinedIcon />
                     </ListItemIcon>
                     <ListItemText primary={jobDuty1} />

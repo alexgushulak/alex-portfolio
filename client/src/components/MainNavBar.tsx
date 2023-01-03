@@ -47,7 +47,7 @@ export default function MainNavBar(props: Props) {
       <List>
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }}>
+            <ListItemButton href="#about-me" sx={{ textAlign: 'center' }}>
               <ListItemText primary={item} />
             </ListItemButton>
           </ListItem>
@@ -64,7 +64,7 @@ export default function MainNavBar(props: Props) {
   const websiteLogo = (
     <Box 
       component="div" mx={2}
-      sx={{ height: '42px',flexGrow: 1, 'text-align': {xs: 'right', sm: 'left'}, display: { sm: 'block' } }}>
+      sx={{ height: '42px',flexGrow: 1, textAlign: {xs: 'right', sm: 'left'}, display: { sm: 'block' } }}>
       <a href="/">
         <img src={logo} alt="logo" height="40px" />
       </a>
@@ -96,7 +96,7 @@ export default function MainNavBar(props: Props) {
           </Typography> */}
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
-              <Button href={resumeURL} key={item} sx={{ color: "#FFF", 'font-size': {sm: '11px!important', md: '12px!important'}, mx: {sm: 0.5, md: 1} }}>
+              <Button href="#about-me" key={item} sx={{ color: "#FFF", 'font-size': {sm: '11px!important', md: '12px!important'}, mx: {sm: 0.5, md: 1} }}>
                 {item}
               </Button>
             ))}
