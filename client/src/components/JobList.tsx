@@ -25,7 +25,7 @@ function TabPanel(props: TabPanelProps) {
       {...other}
     >
       {value === index && (
-        <Box sx={{ p: 3 }}>
+        <Box sx={{ 'padding': '20px' }}>
           <Typography>{children}</Typography>
         </Box>
       )}
@@ -51,10 +51,10 @@ export default function VerticalTabs() {
     <Container
             className="main-page-container"
             maxWidth="md"
-            sx={{'margin-top': {xs: 25, sm: 25}, 'margin-bottom': {xs: 75, sm: 100}}}
+            sx={{'margin-top': {xs: 25, sm: 25}, 'margin-bottom': {xs: 75, sm: 0}}}
         >
     <Box
-      className="job-list-box" sx={{ display: { sm: 'flex', xs: 'none' }, flexGrow: 1, bgcolor: '', 'min-height': '300px', height: 'auto', 'justify-content': 'left', width: {sm: 'auto', md: 'auto'} }}
+      className="job-list-box" sx={{ display: { sm: 'flex', xs: 'none' }, flexGrow: 1, bgcolor: '', 'min-height': 'auto', height: 'auto', 'justify-content': 'left', width: {sm: 'auto', md: 'auto'} }}
     >
       <Tabs
         orientation="vertical"
@@ -65,65 +65,43 @@ export default function VerticalTabs() {
         sx={{ borderRight: 1, borderColor: 'divider', minWidth: '140px' }}
       >
         <Tab label="Volta Labs" {...a11yProps(0)} />
-        <Tab label="Shark Ninja" {...a11yProps(1)} />
-        <Tab label="Bosch TM4EV" {...a11yProps(2)} />
+        <Tab label="Bosch" {...a11yProps(1)} />
       </Tabs>
       <TabPanel value={value} index={0}>
-        <JobInfo 
+      <JobInfo
           companyName="Volta Labs"
           jobTitle="Thermal Engineer"
-          jobDuty1="Developed python GUI to input CSV data, modify plot settings, and display thermal calibration graphs."
-          jobDuty2="Improved functionality of heater control system by modifying C++ classes and control logic."
-          jobDuty3="Modified 3D Printer Controller firmware to control heaters with custom temperature sensors."/>
+          jobDuty1="Built Python GUI that automated frequent temperature plotting and data entry tasks for research associates"
+          jobDuty2="Forked open source firmware and built thermal control features used at customer product deployments."/>
       </TabPanel>
       <TabPanel value={value} index={1}>
         <JobInfo 
           companyName="Bosch"
           jobTitle="R&D Engineer"
-          jobDuty1="Wrote LabVIEW and MATLAB programs to monitor and analyze components (pumps, valves, HXs, heaters)"
-          jobDuty2="Implemented LIN communication protocol in LABVIEW to enable testing of propriety valve and firmware."
-          jobDuty3="Test"/>
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-        <JobInfo 
-          companyName="Bosch"
-          jobTitle="Mech-E Co-op"
-          jobDuty1="Wrote LabVIEW and MATLAB programs to monitor and analyze components (pumps, valves, HXs, heaters)"
-          jobDuty2="Implemented LIN communication protocol in LABVIEW to enable testing of propriety valve and firmware."
-          jobDuty3="Test"/>
+          jobDuty1="Wrote LabVIEW and MATLAB programs to monitor and analyze components (pumps, valves, heat exchangers, heaters)"
+          jobDuty2="Implemented LIN communication protocol in LABVIEW to enable testing of propriety valve and firmware."/>
       </TabPanel>
     </Box>
     <Box sx={{ display: { sm: 'none' }, flexGrow: 1, bgcolor: '', height: 1, 'justify-content': 'left', width: {sm: 500, md: 1000} }}>
     <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
     <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
       <Tab label="Volta Labs" {...a11yProps(0)} />
-      <Tab label="Shark Ninja" {...a11yProps(1)} />
-      <Tab label="Bosch TM4EV" {...a11yProps(2)} />
+      <Tab label="Bosch" {...a11yProps(1)} />
     </Tabs>
   </Box>
   <TabPanel value={value} index={0}>
-        <JobInfo 
+        <JobInfo
           companyName="Volta Labs"
           jobTitle="Thermal Engineer"
-          jobDuty2="Developed node web app that allows a user to add, view, and search employees in a MySQL database"
-          jobDuty3="Used React to create a filtered search box to elegantly display specific employee data."
-          jobDuty1="Implemented a registration and login system that restricted permissions on certain pages in the application."/>
+          jobDuty2="Built Python GUI that automated frequent temperature plotting and data entry tasks for research associates"
+          jobDuty1="Forked open source firmware and built thermal control features used at customer product deployments."/>
       </TabPanel>
       <TabPanel value={value} index={1}>
         <JobInfo 
-          companyName="SharkNinja"
-          jobTitle="Mechanical Engineer"
-          jobDuty2="Filler Data Is Here Right Now"
-          jobDuty3="Filler Data Is Here Right Now"
-          jobDuty1="Filler Data Is Here Right Now"/>
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-        <JobInfo 
           companyName="Bosch"
           jobTitle="Mech-E Co-op"
-          jobDuty2="Filler Data Is Here Right Now"
-          jobDuty3="Filler Data Is Here Right Now"
-          jobDuty1="Filler Data Is Here Right Now"/>
+          jobDuty1="Wrote LabVIEW and MATLAB programs to monitor and analyze components (pumps, valves, HXs, heaters)."
+          jobDuty2="Implemented LIN communication protocol and designed control scheme to enable system testing of valves."/>
       </TabPanel>
     </Box>
 

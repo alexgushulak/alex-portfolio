@@ -14,15 +14,15 @@ type AppProps = {
 
 export default function MediaCard({ title, description, imagePath }: AppProps) {
   return (
-    <Card className="media-card" sx={{ width: { xs: 0.90, md: 0.45  } }}>
+    <Card className="media-card" sx={{ width: { xs: 0.90, md: 0.40  }, margin: '25px'}}>
       <CardMedia
-        sx={{ height: 250 }}
+        sx={{ height: '200px' }}
         image={imagePath}
         title="na"
       />
-      <CardContent sx={{ 'min-height': 150 }}>
+      <CardContent sx={{'min-height': {xs: '100px', sm:'100px', md:'265px'}}}>
         <Typography gutterBottom variant="h5" component="div">{title}</Typography>
-        <Typography variant="body2" color="text.secondary">{description}</Typography>
+        <Typography variant="body2" color="text.secondary" sx={{padding: 2}}>{description}</Typography>
       </CardContent>
       <CardActions className="button-container">
         <Button variant="contained" size="small">Github</Button>

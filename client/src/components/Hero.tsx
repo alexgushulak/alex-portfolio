@@ -9,9 +9,9 @@ import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
 import '../App.css';
 
-export default function IntroductionCard() {
+export default function Hero() {
   return (
-    <Container maxWidth='md' sx={{'min-height': '550px', 'height': {xs: '90vh', sm:'90vh'}, 'line-height': {xs: '25px', sm: '75px'},'margin-top': {xs: 0, sm: 0}, 'margin-bottom': {xs: 0, sm: 0}}} >
+    <Container maxWidth='md' sx={{'min-height': '550px', 'height': {xs: '90vh', sm:'90vh'}, 'line-height': {xs: '25px', sm: '40px'},'margin-top': {xs: 0, sm: 0}, 'margin-bottom': {xs: 0, sm: 0}}} >
     <Container
       className="main-page-container"
       sx={{'vertical-align': 'middle', 'display': 'inline'}}

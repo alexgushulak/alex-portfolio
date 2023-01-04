@@ -3,7 +3,7 @@ import MediaCard from './components/MediaCard';
 import MainNavBar from './components/MainNavBar';
 import JobList from './components/JobList';
 import Divider from '@mui/material/Divider';
-import IntroductionCard from './components/IntroductionCard';
+import Hero from './components/Hero';
 import imgUrlBusiness from './assets/business.jpeg';
 import imgUrlCliff from './assets/cliff.jpg';
 import imgUrlComputer from './assets/computer.jpg';
@@ -57,7 +57,7 @@ export default function App() {
             <MainNavBar />
             {info}
             <div className="website-container">
-              <IntroductionCard />
+              <Hero />
               <Container sx={{mb:10}}>
                 <Typography id="about-me" className="section-title" variant="h5" component="div" align="left" sx={{'font-family': 'Roboto Mono', ml:'0%'}} gutterBottom>About Me </Typography>
                 <Divider variant="fullWidth" />
@@ -72,11 +72,12 @@ export default function App() {
               <Typography id="projects" className="section-title" variant="h5" component="div" align="left" sx={{'font-family': 'Roboto Mono', ml:'0%'}} gutterBottom>Projects </Typography>
               <Divider variant="fullWidth"/>
               <MediaCard
-                title={"Finanical Tracking Web App"}
+                title={"Finanical Tracker Web Application"}
                 description={"I created a financial tracking app featuring budgeting tools, bill reminders, personalized spending reports, and bank integration. Users can also set and track financial goals. Take control of your finances with this convenient app."}
                 imagePath={(imgUrlComputer)} />
-              <MediaCard title={"Temperature Plot Generator GUI"} description={"Desc 2"} imagePath={imgUrlBusiness} />
-              <MediaCard title={"Machine Learning"} description={"Desc 3"} imagePath={imgUrlCliff}/>
+              <MediaCard title={"Online Video to MP3 Service"}
+                        description={"I designed an online video to MP3 service to allow users to easily convert video files into high-quality MP3 audio files. With a simple and intuitive interface, anyone can extract the audio track from their favorite videos or save the audio for offline listening on their device"}
+                        imagePath={imgUrlBusiness} />
             </Container>
             <Footer />
             </div>
