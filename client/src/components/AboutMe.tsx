@@ -1,4 +1,4 @@
-import { Typography } from '@mui/material';
+import { Typography, Button, Stack } from '@mui/material';
 import Container from '@mui/material/Container';
 
 export default function AboutMe() {
@@ -14,6 +14,10 @@ export default function AboutMe() {
             specializing in React, Node, and Express. I am constantly looking to learn and grow as a developer, 
             and am excited to bring my diverse skill set to any project I work on.
             </Typography>
+            <Stack direction="row" spacing={2} sx={{'margin-top': 30}}>
+                <Button href="#projects" className="main-page-button" variant="outlined">View my resume</Button>
+                <Button href="#projects" className="main-page-button" variant="outlined">Contact Me</Button>
+            </Stack>
         </Container>
     )   
 }
