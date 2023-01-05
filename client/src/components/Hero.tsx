@@ -20,7 +20,7 @@ export default function Hero() {
           My name is
         </Typography>
           <Box display="flex">
-            <Typography className="main-page-title" variant="h1" component="div" sx={{'font-size': {xs:'11vw  !important',sm:'7vw!important', md:'6.5vw!important'}}}>Alex Gushulak. 🚀</Typography>
+            <Typography className="main-page-title" variant="h1" component="div" sx={{'font-size': {xs:'10vw  !important',sm:'6vw!important', md:'5.5vw!important'}}}>Alex Gushulak. 🚀</Typography>
           </Box>
         <Typography
           className="main-page-title"
@@ -28,7 +28,7 @@ export default function Hero() {
           variant="h1"
           component="div"
           gutterBottom
-          sx={{'font-size': {xs:'11vw!important',sm:'7vw!important', md:'6vw!important'}}}>
+          sx={{'font-size': {xs:'10vw!important',sm:'6vw!important', md:'5vw!important'}}}>
             I Like To Write Code
         </Typography>
         <Typography className="main-page-description" color="#dadada" variant="h6" component="div" gutterBottom>
