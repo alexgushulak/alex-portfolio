@@ -1,5 +1,6 @@
 import { Typography, Button, Stack } from '@mui/material';
 import Container from '@mui/material/Container';
+import resumeURL from '../assets/Alex_Gushulak_Software_Resume.pdf';
 
 export default function AboutMe() {
     return (
@@ -15,8 +16,8 @@ export default function AboutMe() {
             and am excited to bring my diverse skill set to any project I work on.
             </Typography>
             <Stack direction="row" spacing={2} sx={{'margin-top': 30}}>
-                <Button href="#projects" className="main-page-button" variant="outlined">View my resume</Button>
-                <Button href="#projects" className="main-page-button" variant="outlined">Contact Me</Button>
+                <Button href={resumeURL} className="main-page-button" variant="outlined">View my resume</Button>
+                <Button href="mailto:alex.gushulak@gmail.com" className="main-page-button" variant="outlined">Contact Me</Button>
             </Stack>
         </Container>
     )   
