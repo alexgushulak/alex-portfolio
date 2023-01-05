@@ -28,7 +28,19 @@ interface Props {
 
 const drawerWidth = 240;
 const websiteName = "Alex Gushulak Portfolio"
-const navItems = ['About Me', 'Work Experience', 'Projects'];
+const navLinks = [
+  { name: "About", 
+   path: "#about-me" 
+  },
+  {
+    name: "Work Experience",
+    path: "#work-experience",
+  },
+  {
+    name: "Projects",
+    path: "#projects",
+  }
+];
 
 export default function MainNavBar(props: Props) {
   const { window } = props;
@@ -45,10 +57,10 @@ export default function MainNavBar(props: Props) {
       </Typography>
       <Divider />
       <List>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton href="#about-me" sx={{ textAlign: 'center' }}>
-              <ListItemText primary={item} />
+        {navLinks.map((link, index) => (
+          <ListItem key={index} disablePadding>
+            <ListItemButton href={link.path} sx={{ textAlign: 'center' }}>
+              <ListItemText primary={link.name} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -95,9 +107,9 @@ export default function MainNavBar(props: Props) {
           >
           </Typography> */}
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            {navItems.map((item) => (
-              <Button href="#about-me" key={item} sx={{ color: "#FFF", 'font-size': {sm: '11px!important', md: '12px!important'}, mx: {sm: 0.5, md: 1} }}>
-                {item}
+            {navLinks.map((link, index) => (
+              <Button href={link.path} key={index} sx={{ color: "#FFF", 'font-size': {sm: '11px!important', md: '12px!important'}, mx: {sm: 0.5, md: 1} }}>
+                {link.name}
               </Button>
             ))}
             <Button variant="outlined" href={resumeURL} key="Resume" sx={{ color: "#64ffd8", 'font-size': '12px!important', mx: {sm: 0, md: 1}  }}>
