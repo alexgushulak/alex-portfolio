@@ -72,14 +72,16 @@ export default function VerticalTabs() {
           companyName="Volta Labs"
           jobTitle="Thermal Engineer"
           jobDuty1="Built Python GUI that automated frequent temperature plotting and data entry tasks for research associates"
-          jobDuty2="Forked open source firmware and built thermal control features used at customer product deployments."/>
+          jobDuty2="Forked open source firmware and built thermal control features used at customer product deployments."
+          date="June 2021 - Present"/>
       </TabPanel>
       <TabPanel value={value} index={1}>
         <JobInfo 
           companyName="Bosch"
-          jobTitle="R&D Engineer"
+          jobTitle="Mech-E Co-op"
           jobDuty1="Wrote LabVIEW and MATLAB programs to monitor and analyze components (pumps, valves, heat exchangers, heaters)"
-          jobDuty2="Implemented LIN communication protocol in LABVIEW to enable testing of propriety valve and firmware."/>
+          jobDuty2="Implemented LIN communication protocol in LABVIEW to enable testing of propriety valve and firmware."
+          date="January - October 2019"/>
       </TabPanel>
     </Box>
     <Box sx={{ display: { sm: 'none' }, flexGrow: 1, bgcolor: '', height: 1, 'justify-content': 'left', width: {sm: 500, md: 1000} }}>
@@ -94,14 +96,16 @@ export default function VerticalTabs() {
           companyName="Volta Labs"
           jobTitle="Thermal Engineer"
           jobDuty2="Built Python GUI that automated frequent temperature plotting and data entry tasks for research associates"
-          jobDuty1="Forked open source firmware and built thermal control features used at customer product deployments."/>
+          jobDuty1="Forked open source firmware and built thermal control features used at customer product deployments."
+          date="June 2021 - Present"/>
       </TabPanel>
       <TabPanel value={value} index={1}>
         <JobInfo 
           companyName="Bosch"
           jobTitle="Mech-E Co-op"
           jobDuty1="Wrote LabVIEW and MATLAB programs to monitor and analyze components (pumps, valves, HXs, heaters)."
-          jobDuty2="Implemented LIN communication protocol and designed control scheme to enable system testing of valves."/>
+          jobDuty2="Implemented LIN communication protocol and designed control scheme to enable system testing of valves."
+          date="January - October 2019"/>
       </TabPanel>
     </Box>
 
