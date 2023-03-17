@@ -4,9 +4,8 @@ import MainNavBar from './components/MainNavBar';
 import JobList from './components/JobList';
 import Divider from '@mui/material/Divider';
 import Hero from './components/Hero';
-import imgUrlBusiness from './assets/business.jpeg';
-import imgUrlCliff from './assets/cliff.jpg';
-import imgUrlComputer from './assets/computer.jpg';
+import imgUrlBusiness from './assets/ipod.png';
+import imgUrlComputer from './assets/finapp_website.png';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { Typography } from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -73,15 +72,17 @@ export default function App() {
             <Divider variant="fullWidth" />
             <MediaCard
               title={"Finanical Tracker Web Application"}
-              description={"I created a financial tracking app featuring budgeting tools, bill reminders, personalized spending reports, and bank integration. Users can also set and track financial goals. Take control of your finances with this convenient app."}
+              description={`I am building a financial tracking application for users to track
+              and categorize their expenses. The main functionality that is working right now is the login
+              and registration system=, which is built using Node.js, Express.js, and MongoDB.`}
               imagePath={(imgUrlComputer)}
               githubLink={"https://github.com/alexgushulak/NodeAuthApp"}
-              deployLink={"https://github.com/alexgushulak/NodeAuthApp"} />
+              deployLink={"https://master--transcendent-babka-f0fe4e.netlify.app/"} />
             <MediaCard title={"Online Video to MP3 Service"}
-              description={"I designed an online video to MP3 service to allow users to easily convert video files into high-quality MP3 audio files. With a simple and intuitive interface, anyone can extract the audio track from their favorite videos or save the audio for offline listening on their device"}
+              description={"Under Construction"}
               imagePath={imgUrlBusiness}
-              githubLink={"https://github.com/"}
-              deployLink={"https://github.com/"} />
+              githubLink={"#"}
+              deployLink={"#"} />
           </Container>
           <Footer />
         </div>
