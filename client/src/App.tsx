@@ -51,7 +51,8 @@ export default function App() {
 
   return (
     <div>
-      <ThemeProvider theme={darkTheme}>
+      Loading...
+      {/* <ThemeProvider theme={darkTheme}>
         <CssBaseline />
         <MainNavBar />
         {info}
@@ -86,7 +87,7 @@ export default function App() {
           </Container>
           <Footer />
         </div>
-      </ThemeProvider>
+      </ThemeProvider> */}
     </div>
   );
 }
