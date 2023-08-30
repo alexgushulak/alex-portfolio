@@ -51,7 +51,7 @@ export default function App() {
 
   return (
     <div>
-      Loading...
+      Loading... :)
       {/* <ThemeProvider theme={darkTheme}>
         <CssBaseline />
         <MainNavBar />
