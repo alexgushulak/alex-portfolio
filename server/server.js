@@ -3,7 +3,11 @@ const res = require('express/lib/response')
 const cors = require('cors')
 const geoip = require('geoip-lite')
 const app = express()
+var bodyParser = require('body-parser')
 const port = 3000
+
+// create application/json parser
+var jsonParser = bodyParser.json()
 
 app.use(cors())
 
@@ -21,6 +25,13 @@ app.get('/info', (req, res) => {
         name: "",
         age: 30,
         address: "1234 Main St"
+    })
+})
+
+app.post('/submit', jsonParser, (req,res) => {
+    console.log(`Message Recieved: ${req.body.message}`)
+    res.status(200).send({
+        message: "Data received"
     })
 })
 
