@@ -32,7 +32,7 @@ app.post('/submit', jsonParser, (req,res) => {
     console.log(req.socket.remoteAddress);
     var ip = req.header('x-forwarded-for');
     var geo = JSON.stringify(geoip.lookup(ip));
-    console.log(`Message Recieved: ${geo}, ${ip}: ${req.body.message}`)
+    console.log(`Message Recieved: ${geo}, ${ip}: ${req.body.message}, ${req.body.count}`)
     res.status(200).send({
         message: "Data received"
     })
