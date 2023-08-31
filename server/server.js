@@ -11,7 +11,7 @@ var jsonParser = bodyParser.json()
 
 app.use(cors())
 
-app.get('/', (req, res) => {
+app.get('/', (res) => {
     res.send('Hello World!')
 })
 
@@ -29,7 +29,10 @@ app.get('/info', (req, res) => {
 })
 
 app.post('/submit', jsonParser, (req,res) => {
-    console.log(`Message Recieved: ${req.body.message}`)
+    console.log(req.socket.remoteAddress);
+    var ip = req.header('x-forwarded-for');
+    var geo = geoip.lookup(ip);
+    console.log(`Message Recieved: ${geo}, ${ip}: ${req.body.message}`)
     res.status(200).send({
         message: "Data received"
     })
