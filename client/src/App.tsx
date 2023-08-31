@@ -55,6 +55,7 @@ export default function App() {
 
   const [info, setInfo] = useState([]);
   const [thumbnailText, setThumbnailText] = useState('');
+  const [count, setCount] = useState(0);
 
   const gatherInfo = () => {
     axios.get('https://alex-portfolio-production.up.railway.app/info').then((res) => {
@@ -63,11 +64,14 @@ export default function App() {
   }
 
   React.useEffect(() => { 
-  }, []);
+    setCount(0)
+  }, [thumbnailText]);
 
   const trackClick = () => {
+    setCount(count+1)
     axios.post('https://alex-portfolio-production.up.railway.app/submit',
-              {message: thumbnailText}
+              {message: thumbnailText,
+               count: count}
     ).then((res) => {
       // do nothing
     });
