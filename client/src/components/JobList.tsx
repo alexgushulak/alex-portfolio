@@ -64,18 +64,27 @@ export default function VerticalTabs() {
         aria-label="Vertical tabs example"
         sx={{ borderRight: 1, borderColor: 'divider', minWidth: '140px' }}
       >
-        <Tab label="Volta Labs" {...a11yProps(0)} />
-        <Tab label="Bosch" {...a11yProps(1)} />
+        <Tab label="Vizgen" {...a11yProps(0)}/>
+        <Tab label="Volta Labs" {...a11yProps(1)} />
+        <Tab label="Bosch" {...a11yProps(2)} />
       </Tabs>
       <TabPanel value={value} index={0}>
+        <JobInfo 
+          companyName="Vizgen"
+          jobTitle="Sustaining Software Engineer"
+          jobDuty1="Architected a user interface for field service engineers to manually control instrument functions, run qualification/verification protocols, and view the instrument status"
+          jobDuty2="Upgraded an out-of-date bioinformatics pipeline on AWS (Batch) by integrating a new internal analysis tool."
+          date="May 2023 - October 2023"/>
+      </TabPanel>
+      <TabPanel value={value} index={1}>
       <JobInfo
           companyName="Volta Labs"
           jobTitle="Thermal Engineer"
           jobDuty1="Built Python GUI that automated frequent temperature plotting and data entry tasks for research associates"
-          jobDuty2="Forked open source firmware and built thermal control features used at customer product deployments."
-          date="June 2021 - Present"/>
+          jobDuty2="Forked Open Source 3D printer firmware and added new features to the thermal controller enabling rapid deployment of product to customers"
+          date="June 2021 - April 2023"/>
       </TabPanel>
-      <TabPanel value={value} index={1}>
+      <TabPanel value={value} index={2}>
         <JobInfo 
           companyName="Bosch"
           jobTitle="Mech-E Co-op"
@@ -87,27 +96,36 @@ export default function VerticalTabs() {
     <Box sx={{ display: { sm: 'none' }, flexGrow: 1, bgcolor: '', height: 1, 'justify-content': 'left', width: {sm: 500, md: 1000} }}>
     <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
     <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-      <Tab label="Volta Labs" {...a11yProps(0)} />
-      <Tab label="Bosch" {...a11yProps(1)} />
+      <Tab label="Vizgen" {...a11yProps(0)}/>
+      <Tab label="Volta Labs" {...a11yProps(1)} />
+      <Tab label="Bosch" {...a11yProps(2)} />
     </Tabs>
   </Box>
   <TabPanel value={value} index={0}>
-        <JobInfo
-          companyName="Volta Labs"
-          jobTitle="Thermal Engineer"
-          jobDuty2="Built Python GUI that automated frequent temperature plotting and data entry tasks for research associates"
-          jobDuty1="Forked open source firmware and built thermal control features used at customer product deployments."
-          date="June 2021 - Present"/>
+        <JobInfo 
+          companyName="Vizgen"
+          jobTitle="Sustaining Software Engineer"
+          jobDuty1="Built a GUI (Python) for our 30+ FSEs to run qualification protocols on commercial instruments in the field"
+          jobDuty2="Upgraded an out-of-date bioinformatics pipeline on AWS (Batch) by integrating a new internal analysis tool."
+          date="May 2023 - October 2023"/>
       </TabPanel>
       <TabPanel value={value} index={1}>
+      <JobInfo
+          companyName="Volta Labs"
+          jobTitle="Thermal Engineer"
+          jobDuty1="Built Python GUI that automated frequent temperature plotting and data entry tasks for research associates"
+          jobDuty2="Forked open source firmware and built thermal control features used at customer product deployments."
+          date="June 2021 - April 2023"/>
+      </TabPanel>
+      <TabPanel value={value} index={2}>
         <JobInfo 
           companyName="Bosch"
           jobTitle="Mech-E Co-op"
-          jobDuty1="Wrote LabVIEW and MATLAB programs to monitor and analyze components (pumps, valves, HXs, heaters)."
-          jobDuty2="Implemented LIN communication protocol and designed control scheme to enable system testing of valves."
+          jobDuty1="Wrote LabVIEW and MATLAB programs to monitor and analyze components (pumps, valves, heat exchangers, heaters)"
+          jobDuty2="Implemented LIN communication protocol in LABVIEW to enable testing of propriety valve and firmware."
           date="January - October 2019"/>
       </TabPanel>
-    </Box>
+  </Box>
 
     </Container>
   );

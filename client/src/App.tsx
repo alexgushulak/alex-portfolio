@@ -6,6 +6,7 @@ import Divider from '@mui/material/Divider';
 import Hero from './components/Hero';
 import imgUrlBusiness from './assets/ipod.png';
 import imgUrlComputer from './assets/finapp_website.png';
+import imgUrlClickgen from './assets/clickgenio.png'
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { Typography } from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -58,7 +59,15 @@ export default function App() {
         <div className="website-container">
           <Hero />
           <Container sx={{ mb: 10 }}>
-            <Typography id="about-me" className="section-title" variant="h5" component="div" align="left" sx={{ 'font-family': 'Roboto Mono', ml: '0%' }} gutterBottom>About Me </Typography>
+            <Typography
+              id="about-me"
+              className="section-title"
+              variant="h5"
+              component="div"
+              align="left"
+              sx={{ 'font-family': 'Roboto Mono', ml: '0%' }} gutterBottom>
+                About Me 
+            </Typography>
             <Divider variant="fullWidth" />
             <AboutMe />
           </Container>
@@ -71,18 +80,18 @@ export default function App() {
             <Typography id="projects" className="section-title" variant="h5" component="div" align="left" sx={{ 'font-family': 'Roboto Mono', ml: '0%' }} gutterBottom>Projects </Typography>
             <Divider variant="fullWidth" />
             <MediaCard
-              title={"Finanical Tracker Web Application"}
-              description={`I am building a financial tracking application for users to track
-              and categorize their expenses. The main functionality that is working right now is the login
-              and registration system=, which is built using Node.js, Express.js, and MongoDB.`}
+              title={"Stock Vesting Calculator"}
+              description={"I built a simple web application for users to calculate how much the value of their vested stocks have grown since they've vested"}
               imagePath={(imgUrlComputer)}
               githubLink={"https://github.com/alexgushulak/NodeAuthApp"}
               deployLink={"https://master--transcendent-babka-f0fe4e.netlify.app/"} />
-            <MediaCard title={"Online Video to MP3 Service"}
-              description={"Under Construction"}
-              imagePath={imgUrlBusiness}
+            <MediaCard title={"AI Youtube Thumbnail Generator"}
+              description={`
+               I developed a SaaS product that enables content creators to generate YouTube thumbnails using Stable Diffusion XL 1.0. Users have created more than 1,000 YouTube thumbnails using the service, and I have leveraged customer data to enhance usability and boost conversion rates. On the frontend, I am utilizing React and Material UI, while on the backend, I rely on Express running on a Node.js server with a PostgreSQL database to store user and image data.
+              `}
+              imagePath={imgUrlClickgen}
               githubLink={"#"}
-              deployLink={"#"} />
+              deployLink={"https://clickgen.io/"} />
           </Container>
           <Footer />
         </div>

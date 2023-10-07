@@ -17,13 +17,13 @@ type AppProps = {
 
 export default function MediaCard({ title, description, imagePath, githubLink, deployLink }: AppProps) {
   return (
-    <Card className="media-card" sx={{ width: { xs: 0.90, md: 0.40  }, margin: '25px'}}>
+    <Card className="media-card" sx={{ width: { xs: 0.90, md: 0.45  }, margin: '20px 5px'}}>
       <CardMedia
         sx={{ height: '200px' }}
         image={imagePath}
         title="na"
       />
-      <CardContent sx={{'min-height': {xs: '100px', sm:'100px', md:'265px'}}}>
+      <CardContent sx={{'min-height': {xs: '100px', sm:'100px', md:'300px'}}}>
         <Typography gutterBottom variant="h5" component="div">{title}</Typography>
         <Typography variant="body2" color="text.secondary" sx={{padding: 2}}>{description}</Typography>
       </CardContent>
