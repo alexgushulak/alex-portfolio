@@ -7,6 +7,18 @@ const port = 3000
 
 app.use(cors())
 
+// test
+
+// var options = {
+//     addressLookup: true,
+//     timezone: true,
+//     map: "my-map",
+//     staticMap: true
+//   };
+// geolocator.locateByIP(options, function (err, location) {
+//     console.log(err || location);
+// });
+
 app.get('/', (req, res) => {
     res.send('Hello World!')
 })
