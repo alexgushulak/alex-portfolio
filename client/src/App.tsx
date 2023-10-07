@@ -15,6 +15,7 @@ import AboutMe from './components/AboutMe';
 import Footer from './components/Footer';
 import { orange } from '@mui/material/colors';
 import TextField from '@mui/material/TextField';
+import Text from '@mui/components/Text';
 import RainbowTesla from './assets/rainbow_tesla.png'
 import Tsunami from './assets/tsunami.png'
 import Box from '@mui/material/Box';
