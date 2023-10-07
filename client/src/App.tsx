@@ -1,6 +1,6 @@
 import Container from '@mui/material/Container';
 import MediaCard from './components/MediaCard';
-import MainNavBar from './components/MainNavBar';
+import MainNavBar from './compone-nts/MainNavBar';
 import JobList from './components/JobList';
 import Divider from '@mui/material/Divider';
 import Hero from './components/Hero';
