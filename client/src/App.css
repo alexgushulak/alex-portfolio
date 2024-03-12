@@ -45,7 +45,7 @@ opacity: 1;
 .main-page-hello {
   font-family: 'Roboto Mono', monospace!important;
   text-align: left;
-  font-size: 16px!important;
+  font-size: 20px!important;
 }
 
 .main-page-title {
@@ -59,7 +59,7 @@ opacity: 1;
 
 .main-page-description {
   text-align: left;
-  font-size: 16px!important;
+  font-size: 18px!important;
   max-width: 500px;
   margin-bottom: 36.75px!important;
 }
@@ -108,7 +108,7 @@ html
   width: 100px;
   height: 100px;
   padding: 25px;
-  margin: 50px auto;
+  margin: 30px auto;
 }
 
 .chevron {
@@ -147,6 +147,14 @@ html
   right: 0;
   width: 50%;
   transform: skew(0deg, -30deg);
+}
+
+.quip {
+  /* text-decoration: underline; */
+  background-color: #7ee9ce;
+  color: black;
+  padding: 3px 4px 1px 4px;
+  white-space: nowrap;
 }
 
 @keyframes move {
