@@ -1,4 +1,5 @@
 import Card from '@mui/material/Card';
+import Box from '@mui/material/Box';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Link from '@mui/material/Link';
@@ -14,9 +15,11 @@ type AppProps = {
   githubLink: string;
   deployLink: string;
   skills: string;
+  button1_text?: string;
+  button2_text?: string;
 };
 
-export default function MediaCard({ title, description, imagePath, githubLink, deployLink, skills }: AppProps) {
+export default function MediaCard({ title, description, imagePath, githubLink, deployLink, skills, button1_text, button2_text }: AppProps) {
   return (
     <Card className="media-card" sx={{ width: { xs: 0.90, md: 0.45  }, margin: '20px 5px'}}>
       <CardMedia
@@ -30,12 +33,20 @@ export default function MediaCard({ title, description, imagePath, githubLink, d
         <Typography variant="body2" color="text.secondary" sx={{padding: 2}}>{description}</Typography>
       </CardContent>
       <CardActions className="button-container">
-        <Link href={githubLink}>
-          <Button variant="contained" size="small">Github</Button>
-        </Link>
-        <Link href={deployLink}>
-          <Button variant="contained" size="small">Demo</Button>
-        </Link>
+        {
+          button1_text ? (
+            <Link href={githubLink}>
+              <Button variant="contained" size="small">{button1_text}</Button>
+            </Link>
+          ) : <Box>&nbsp;</Box>
+        }
+        {
+          button2_text ? (
+            <Link href={deployLink}>
+              <Button variant="contained" size="small">{button2_text}</Button>
+            </Link>
+          ) : null
+        }
       </CardActions>
     </Card>
   );

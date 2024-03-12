@@ -9,6 +9,8 @@ import imgUrlToaster from './assets/toaster.png';
 import imgUrlStm32 from './assets/stm32.png';
 import imgUrlWheelchair from './assets/baseball.webp';
 import imgUrlEngine from './assets/rocket.png';
+import imgUrlVercel from './assets/vercel.webp';
+import urlCapstone from './assets/Baseball_Capstone_Final_Presentation.pdf';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { Typography } from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -41,12 +43,22 @@ const darkTheme = createTheme({
 
 const cardData = [
   {
+    title: "Vercel Clone",
+    description: "I created a Vercel clone that allows a user to deploy a temporary react application to the web. The service I have created handles file storage, build and deployment, and provides a unique URL for the user to access their application.",
+    skills: 'Docker, Node.JS, Typescript, Redis, AWS S3',
+    imagePath: imgUrlVercel,
+    githubLink: "https://github.com/alexgushulak/vercel-clone",
+    deployLink: "#",
+    button1_text: "GitHub",
+  },
+  {
     title: "Senior Capstone: Adaptive Control of a Baseball Pitching Machine",
-    description: "Capstone project to allow a father, who is quadrpelaic, to play baseball with his son by controlling a baseball pitching machine by using the subtle motion of his head and wrist. The project was developed using a Raspberry Pi, Arduino, and a custom-built wheelchair.",
+    description: "Capstone proj ect to allow a father, who is quadrpelaic, to play baseball with his son by controlling a baseball pitching machine by using the subtle motion of his head and wrist. The project was developed using a Raspberry Pi, Arduino, and a custom-built wheelchair.",
     skills: 'React, Material UI, Express, Node.js, PostgreSQL',
     imagePath: imgUrlWheelchair,
-    githubLink: "https://github.com/alexgushulak/NodeAuthApp",
-    deployLink: "https://master--transcendent-babka-f0fe4e.netlify.app/"
+    githubLink: urlCapstone,
+    deployLink: "#",
+    button1_text: "Presentation",
   },
   {
     title: "Youtube Thumbnail Generator SaaS",
@@ -54,15 +66,19 @@ const cardData = [
     skills: "React, Material UI, Express, Node.js, PostgreSQL",
     imagePath: imgUrlClickgen,
     githubLink: "#",
-    deployLink: "https://clickgen.io/"
+    deployLink: "https://clickgen.io/",
+    button1_text: "GitHub",
+    button2_text: "Website"
   },
   {
     title: "Custom STM32 NeoPixel LED PCB",
     skills: "KiCAD, STM32 Board Design, STM32CubeIDE, Neopixel Driver Development, Direct Memory Access",
-    description: "TEST ABC",
+    description: "I designed a custom PCB to control 16 NeoPixel LEDs using an STM32 microcontroller. The board is designed to be daisy-chained to other boards to create larger LED displays. The board is controlled using a custom driver that I developed using the STM32CubeIDE. The driver uses direct memory access to control the LEDs, which allows for smooth animations and fast refresh rates.",
     imagePath: imgUrlStm32,
     githubLink: "#",
-    deployLink: "https://clickgen.io/"
+    deployLink: "https://clickgen.io/",
+    button1_text: "",
+    button2_text: ""
   },
   {
     title: "SharkNinja Flip Toaster",
@@ -70,7 +86,7 @@ const cardData = [
     skills: "C Programming, Mechanical Teardowns, Supply Chain, Prototyping, High Volume Manufacturing, UL/IEC",
     imagePath: imgUrlToaster,
     githubLink: "#",
-    deployLink: "https://clickgen.io/"
+    deployLink: "https://clickgen.io/",
   },
   {
     title: "Liquid Rocket Engine",
@@ -78,7 +94,7 @@ const cardData = [
     skills: 'Rocket Engine Design, Heat Transfer Modeling, 3D Modeling',
     imagePath: imgUrlEngine,
     githubLink: "",
-    deployLink: ""
+    deployLink: "",
   }
 ];
 
@@ -132,6 +148,8 @@ export default function App() {
                 imagePath={card.imagePath}
                 githubLink={card.githubLink}
                 deployLink={card.deployLink}
+                button1_text={card.button1_text}
+                button2_text={card.button2_text}
               />
             ))}
           </Container>
